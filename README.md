@@ -28,7 +28,7 @@ If you change `Code.gs` later, use **Deploy > Manage deployments > Edit > New ve
 
 1. Push this folder to a GitHub repo, for example `makom-gc2026-quiz`.
 2. In Netlify: **Add new site > Import an existing project**, pick the repo. Build command: empty. Publish directory: `.` (also set in `netlify.toml`).
-3. **Site configuration > Change site name** to `makom-quiz` (or `makom-gc2026` if taken).
+3. The live site is https://makomquiz2026.netlify.app. Do not rename it after the sign is printed.
 4. When files other than `content.js` change, increase `CACHE` in `sw.js` (for example `makom-quiz-v2`) so phones pick up the new version.
 
 ## Booth QR sign
@@ -36,7 +36,7 @@ If you change `Code.gs` later, use **Deploy > Manage deployments > Edit > New ve
 After the site name is final, run:
 
 ```bash
-scripts/make-qr.sh https://makom-quiz.netlify.app
+scripts/make-qr.sh https://makomquiz2026.netlify.app
 ```
 
 It writes `print/qr.svg`, `print/qr.png` and `print/qr-sign-letter.pdf` (US Letter). Print the PDF and test-scan it from about 1 m. Once the sign is printed, the URL must not change.
